@@ -1,0 +1,36 @@
+{
+  "background": {
+       "scripts": ["background.js"]
+   },
+    "name": "站岗神器",
+    "author": "dobo",
+    "version": "0.5.422",
+    "manifest_version": 2,
+    "description": "自动站岗,自动提醒,条件筛选 ",
+    "browser_action": {
+      "default_icon": "images/tit_16.png",
+      "default_popup": "lp_toolstrip.html",
+      "default_title": "站岗神器"
+    },
+  "permissions": [ "tabs", "idle", "notifications", "contextMenus", "unlimitedStorage", "webRequest", "webRequestBlocking", "http://*.my089.com/*", "https://*.my089.com/*" ],
+   "icons": {
+      "96": "images/tit_96.png",
+      "16": "images/tit_16.png",
+      "32": "images/tit_32.png",
+      "48": "images/tit_48.png"
+   }, 
+   "icons": {
+      "16": "images/tit_16.png",
+      "48": "images/tit_48.png",
+      "96": "images/tit_96.png"
+    },
+   "optional_permissions": [ "nativeMessaging" ]
+   ,
+    "options_page": "menu.html"
+    , "content_scripts": [
+    {
+      "matches": ["http://*.my089.com/Loan/default.aspx*"],
+      "js": ["jquery.min.js", "/js/content.js"]
+    }
+  ]
+}

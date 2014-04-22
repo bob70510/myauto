@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    </script>
+    <title>神器</title>
+</head>
+<body style="width: 450px;">
+    <div class="bs-example">
+        <div class="list-group">
+            <div class="bs-example">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#"><span class="badge pull-right" id="total">000</span> 设置自动站岗
+                    </a></li>
+                    <li><a href="#"><span class="badge pull-right">0</span> Messages </a></li>
+                </ul>
+            </div>
+            <div class="input-group ">
+                <span class="input-group-addon">
+                    <input type="checkbox" id="ckjine">
+                </span>
+                <input type="text" id="startjine" class="form-control" placeholder="最低金额0.00">
+                <span class="input-group-addon">~</span>
+                <input type="text" id="endjine" class="form-control" placeholder="最高金额0.00">
+            </div>
+            <div class="input-group ">
+                <span class="input-group-addon">
+                    <input type="checkbox" id="cklilv">
+                </span>
+                <input type="text" id="startlilv"  class="form-control" placeholder="最低利率0.00%">
+                <span class="input-group-addon">~</span>
+                <input type="text" id="endlilv" class="form-control" placeholder="最高利率0.00%">
+            </div>
+            <div class="bs-example">
+                <ul class="nav nav-pills">
+                    <li style="width: 200px;"><a href="#">
+                        <input type="checkbox" name="huan" id="cktype0"  value="按月分期还款" />按月分期还款
+                        <span class="badge" id="type0"></span></a></li>
+                    <li style="width: 200px;"><a href="#">
+                        <input type="checkbox" name="huan" id="cktype2"  value="按季分期还款" />按季分期还款<span
+                            class="badge" id="type2"></span></a></li>
+                    <li style="width: 200px;"><a href="#">
+                        <input type="checkbox" name="huan" id="cktype3"  value="按月到期还款" />按月到期全额还款
+                        <span class="badge label-danger" id="type3"></span></a></li>
+                    <li style="width: 200px;"><a href="#">
+                        <input type="checkbox" name="huan" id="cktype4"  value="按天计息按月还款" />按天计息按月还款
+                        <span class="badge" id="type4"></span></a></li>
+                    <li style="width: 200px;"><a href="#">
+                        <input type="checkbox" name="huan" id="cktype1"  value="按天到期还款" />按天一次性还款
+                        <span class="badge" id="type1"></span></a></li>
+                    <li style="width: 200px;"><a href="#">
+                        <input type="checkbox" name="huan" id="cktype5"  value="按天计息按季还款" />按天计息按季还款
+                        <span class="badge"></span></a></li>
+                </ul>
+            </div>
+            <div class="bs-example" style="border-top: 1px solid #ccc">
+                <ul class="nav nav-pills">
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL1"  value="SubL1" />信用标 <span class="badge"
+                            id="SubL1"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL20"  value="SubL20" />秒还标 <span
+                            class="badge" id="SubL20"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL30"  value="SubL30" />重组标 <span
+                            class="badge" id="SubL30"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL90"  value="SubL90" />净值标 <span
+                            class="badge" id="SubL90"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL40"  value="SubL40" />阳光贷<span class="badge"
+                            id="SubL40"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL10"  value="SubL10" />担保标 <span class="badge"
+                            id="SubL10"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL50"  value="SubL50" />快借标 <span
+                            class="badge" id="SubL50"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL60"  value="SubL60" />推荐标 <span
+                            class="badge" id="SubL60"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL110"  value="SubL110" />资产贷 <span
+                            class="badge" id="SubL110"></span></a></li>
+                    <li style="width: 140px;"><a href="#">
+                        <input type="checkbox" name="type" id="ckSubL80"  value="SubL80" />成长贷 <span
+                            class="badge" id="SubL80"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">
+               
+            </span>
+            <input type="text" id="interval" class="form-control" placeholder="刷新间隔，自动刷新间隔如5（5秒钟刷新一次）">
+            <span class="input-group-addon">秒</span>
+        </div>
+        <a href="#" class="list-group-item glyphicon glyphicon-cog">其他设置</a>
+        <div class="input-group" style="float: right;">
+            <button style="margin-left: 100px; width: 100px;" class="btn btn-success" id="btn_submit"
+                type="button">
+                应用</button>
+            <button style="margin-left: 20px; width: 100px;" class="btn" type="button" id="btn_cancel">
+                取消</button>
+        </div>
+    </div>
+</body>
+</html>
